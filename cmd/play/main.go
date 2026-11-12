@@ -54,7 +54,14 @@ func main() {
 
 // printResult erwartet ein Spielfeld am Ende eines Spiels und gibt aus,
 // wer gewonnen hat, z. B. "X hat gewonnen!", oder "Unentschieden.".
-//
-// TODO
 func printResult(cells [][]string) {
+	// Hinweis:
+	// Das Paket `tictactoe` weiß, welches Symbol gewonnen hat.
+
+	winner := tictactoe.Winner(cells)
+	if winner == "" {
+		fmt.Println("Unentschieden.")
+	} else {
+		fmt.Println(winner + " hat gewonnen!")
+	}
 }

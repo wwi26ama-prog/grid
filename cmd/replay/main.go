@@ -5,6 +5,13 @@ package main
 // `grid` und `tictactoe`; das Programm `play` ist ähnlich aufgebaut.
 // Die Züge in `main` sind vorgegeben; die Aufgabe ist `replay`.
 
+import (
+	"fmt"
+
+	"grid/grid"
+	"grid/tictactoe"
+)
+
 func main() {
 	replay([]int{5, 1, 9, 3, 2, 8, 7, 4, 6})
 }
@@ -16,7 +23,31 @@ func main() {
 // weitere Züge nicht mehr gespielt. Am Ende gibt sie das Spielfeld aus und
 // darunter das Ergebnis: "X hat gewonnen!", "O hat gewonnen!",
 // "Unentschieden." oder "Das Spiel ist noch nicht vorbei.".
-//
-// TODO
 func replay(moves []int) {
+	// Hinweis:
+	// Statt der Eingabe in `play` liefert hier die Liste die Züge.
+	// Mit `break` endet eine Schleife vorzeitig.
+
+	cells := tictactoe.NewBoard()
+	player := "X"
+	for _, field := range moves {
+		if tictactoe.GameOver(cells) {
+			break
+		}
+		if !tictactoe.Place(cells, field, player) {
+			fmt.Printf("Ungültiger Zug: %d\n", field)
+			continue
+		}
+		player = tictactoe.NextPlayer(player)
+	}
+
+	fmt.Print(grid.Format(cells))
+	winner := tictactoe.Winner(cells)
+	if winner != "" {
+		fmt.Println(winner + " hat gewonnen!")
+	} else if tictactoe.IsFull(cells) {
+		fmt.Println("Unentschieden.")
+	} else {
+		fmt.Println("Das Spiel ist noch nicht vorbei.")
+	}
 }
