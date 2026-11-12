@@ -57,4 +57,6 @@ func main() {
 //
 // TODO
 func printResult(cells [][]string) {
+	// Hinweis:
+	// Das Paket `tictactoe` weiß, welches Symbol gewonnen hat.
 }

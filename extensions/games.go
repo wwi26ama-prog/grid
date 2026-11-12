@@ -10,6 +10,11 @@ package extensions
 //
 // TODO
 func FreeFields(cells [][]string) []int {
+	// Hinweis:
+	// Gehen Sie alle Zeilen und Spalten durch. Die Nummer eines Felds ergibt
+	// sich aus Zeile und Spalte umgekehrt wie in `tictactoe.Place`:
+	// Zeile mal `3`, plus Spalte, plus `1`.
+
 	return nil
 }
 
@@ -24,5 +29,9 @@ func FreeFields(cells [][]string) []int {
 //
 // TODO
 func DropPiece(cells [][]string, col int, piece string) bool {
+	// Hinweis:
+	// Die unterste Zeile hat die Nummer `grid.Rows(cells) - 1`.
+	// Gehen Sie die Zeilen von unten nach oben durch.
+
 	return false
 }

@@ -23,6 +23,9 @@ const Empty = "."
 //
 // TODO
 func NewBoard() [][]string {
+	// Hinweis:
+	// Die Bibliothek `grid` legt Spielfelder beliebiger Größe an.
+
 	return nil
 }
 
@@ -33,6 +36,11 @@ func NewBoard() [][]string {
 //
 // TODO
 func Place(cells [][]string, field int, player string) bool {
+	// Hinweis:
+	// Die Felder werden ab `1` gezählt, Zeilen und Spalten ab `0`.
+	// Jede Zeile hat drei Felder: Mit `field - 1` liefert die Ganzzahldivision
+	// durch `3` die Zeile und der Rest die Spalte.
+
 	return false
 }
 
@@ -49,6 +57,11 @@ func NextPlayer(player string) string {
 //
 // TODO
 func Wins(cells [][]string, player string) bool {
+	// Hinweis:
+	// Prüfen Sie in einer Schleife alle drei Zeilen und Spalten, danach
+	// die beiden Diagonalen. Die Bibliothek liefert jede dieser Linien
+	// und prüft, ob sie nur ein Symbol enthält.
+
 	return false
 }
 

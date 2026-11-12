@@ -9,6 +9,11 @@ package grid
 //
 // TODO
 func Row(cells [][]string, index int) []string {
+	// Hinweis:
+	// Kopieren Sie die Zellen der Zeile in eine neue Liste.
+	// Würde die Zeile selbst zurückgegeben, könnte der Aufrufer
+	// über das Ergebnis das Spielfeld ändern.
+
 	return nil
 }
 
@@ -17,6 +22,10 @@ func Row(cells [][]string, index int) []string {
 //
 // TODO
 func Col(cells [][]string, index int) []string {
+	// Hinweis:
+	// Eine Spalte steht nicht am Stück im Spielfeld:
+	// Aus jeder Zeile wird die Zelle an derselben Stelle geholt.
+
 	return nil
 }
 
@@ -26,6 +35,9 @@ func Col(cells [][]string, index int) []string {
 //
 // TODO
 func Diagonal(cells [][]string) []string {
+	// Hinweis:
+	// Die Diagonale endet, sobald die Zeilen oder die Spalten zu Ende sind.
+
 	return nil
 }
 
@@ -35,5 +47,9 @@ func Diagonal(cells [][]string) []string {
 //
 // TODO
 func AntiDiagonal(cells [][]string) []string {
+	// Hinweis:
+	// Die Zeile läuft von oben nach unten, die Spalte gleichzeitig
+	// von rechts (`Cols(cells) - 1`) nach links.
+
 	return nil
 }

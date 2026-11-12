@@ -8,6 +8,10 @@ package extensions
 //
 // TODO
 func CountValue(cells [][]string, value string) int {
+	// Hinweis:
+	// Wie bei `grid.Contains` brauchen Sie zwei verschachtelte Schleifen,
+	// zählen aber alle Treffer, statt beim ersten aufzuhören.
+
 	return 0
 }
 
@@ -18,6 +22,10 @@ func CountValue(cells [][]string, value string) int {
 //
 // TODO
 func Transpose(cells [][]string) [][]string {
+	// Hinweis:
+	// Die Bibliothek liefert jede Spalte als Liste.
+	// Hängen Sie die Spalten nacheinander als Zeilen an.
+
 	return nil
 }
 
@@ -28,5 +36,9 @@ func Transpose(cells [][]string) [][]string {
 //
 // TODO
 func ContainsRun(line []string, value string, length int) bool {
+	// Hinweis:
+	// Zählen Sie mit, wie viele Zellen mit dem Wert gerade hintereinander
+	// stehen. Eine andere Zelle setzt den Zähler wieder auf `0`.
+
 	return false
 }

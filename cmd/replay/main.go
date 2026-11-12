@@ -19,4 +19,7 @@ func main() {
 //
 // TODO
 func replay(moves []int) {
+	// Hinweis:
+	// Statt der Eingabe in `play` liefert hier die Liste die Züge.
+	// Mit `break` endet eine Schleife vorzeitig.
 }

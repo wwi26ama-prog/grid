@@ -10,6 +10,10 @@ package grid
 //
 // TODO
 func AllEqual(line []string, value string) bool {
+	// Hinweis:
+	// Ein Gegenbeispiel genügt: Sobald eine Zelle einen anderen Wert hat,
+	// steht das Ergebnis fest.
+
 	return false
 }
 
@@ -18,5 +22,8 @@ func AllEqual(line []string, value string) bool {
 //
 // TODO
 func Contains(cells [][]string, value string) bool {
+	// Hinweis:
+	// Eine äußere Schleife geht die Zeilen durch, eine innere die Zellen einer Zeile.
+
 	return false
 }

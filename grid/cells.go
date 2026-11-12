@@ -13,6 +13,11 @@ package grid
 //
 // TODO
 func New(rows, cols int, value string) [][]string {
+	// Hinweis:
+	// Bauen Sie in einer inneren Schleife eine Zeile auf und hängen Sie
+	// in einer äußeren Schleife die Zeilen an das Spielfeld an.
+	// Jede Zeile muss eine eigene Liste sein.
+
 	return nil
 }
 
@@ -20,6 +25,9 @@ func New(rows, cols int, value string) [][]string {
 //
 // TODO
 func Rows(cells [][]string) int {
+	// Hinweis:
+	// Ein Spielfeld ist eine Liste von Zeilen.
+
 	return 0
 }
 
@@ -28,6 +36,10 @@ func Rows(cells [][]string) int {
 //
 // TODO
 func Cols(cells [][]string) int {
+	// Hinweis:
+	// Alle Zeilen sind gleich lang. Die erste Zeile gibt es aber nur,
+	// wenn das Spielfeld überhaupt Zeilen hat.
+
 	return 0
 }
 
@@ -36,6 +48,9 @@ func Cols(cells [][]string) int {
 //
 // TODO
 func Get(cells [][]string, row, col int) string {
+	// Hinweis:
+	// `cells[row]` ist eine Zeile, also wieder eine Liste.
+
 	return ""
 }
 
@@ -45,6 +60,9 @@ func Get(cells [][]string, row, col int) string {
 //
 // TODO
 func Set(cells [][]string, row, col int, value string) {
+	// Hinweis:
+	// Eine Liste als Parameter verweist auf dieselben Zeilen und Zellen
+	// wie die Liste des Aufrufers. Die Funktion muss deshalb nichts zurückgeben.
 }
 
 // Format erwartet ein Spielfeld und liefert es als Text zur Ausgabe:
@@ -53,5 +71,9 @@ func Set(cells [][]string, row, col int, value string) {
 //
 // TODO
 func Format(cells [][]string) string {
+	// Hinweis:
+	// `strings.Join(row, " ")` setzt die Zellen einer Zeile zu einem Text
+	// zusammen, mit einem Leerzeichen zwischen je zwei Zellen.
+
 	return ""
 }
