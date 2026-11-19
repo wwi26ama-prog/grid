@@ -92,8 +92,6 @@ func IsFull(cells [][]string) bool {
 
 // GameOver erwartet ein Spielfeld und liefert `true`, wenn das Spiel vorbei ist,
 // weil jemand gewonnen hat oder kein Feld mehr frei ist.
-//
-// TODO
 func GameOver(cells [][]string) bool {
 	return IsFull(cells) || Wins(cells, "X") || Wins(cells, "O")
 }
