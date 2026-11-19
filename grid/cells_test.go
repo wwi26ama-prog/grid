@@ -51,10 +51,29 @@ func ExampleSet() {
 }
 
 func ExampleFormat() {
-	cells := [][]string{{"X", ".", "O"}, {".", "X", "."}}
-	fmt.Print(Format(cells))
+	cells1 := [][]string{{".", ".", "."}, {".", ".", "."}, {".", ".", "."}}
+	fmt.Print(Format(cells1))
+
+	fmt.Println()
+
+	cells2 := [][]string{{"X", ".", "O"}, {".", "X", "."}}
+	fmt.Print(Format(cells2))
 
 	// Output:
+	// . . .
+	// . . .
+	// . . .
+	//
 	// X . O
 	// . X .
+}
+
+func ExampleFormatRow() {
+	row := []string{".", ".", "."}
+
+	fmt.Println(FormatRow(row))
+
+	// Output:
+	// . . .
+
 }

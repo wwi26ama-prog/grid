@@ -10,48 +10,76 @@ package grid
 // New erwartet die Anzahl der Zeilen `rows` und Spalten `cols` und einen Wert
 // `value` und liefert ein neues Spielfeld, in dem jede Zelle `value` enthält.
 // Mit `"."` als Wert entsteht z. B. ein leeres Spielfeld.
-//
-// TODO
 func New(rows, cols int, value string) [][]string {
-	return nil
+	// Ein leeres Grid erzeugen.
+	grid := [][]string{}
+
+	// Die Zeilen erzeugen.
+	for range rows {
+		row := []string{}
+		for range cols {
+			row = append(row, value)
+		}
+		grid = append(grid, row)
+	}
+
+	return grid
 }
 
 // Rows erwartet ein Spielfeld und liefert die Anzahl seiner Zeilen.
-//
-// TODO
 func Rows(cells [][]string) int {
-	return 0
+	return len(cells)
 }
 
 // Cols erwartet ein Spielfeld und liefert die Anzahl seiner Spalten,
 // also die Länge der ersten Zeile. Ein Spielfeld ohne Zeilen hat `0` Spalten.
-//
-// TODO
 func Cols(cells [][]string) int {
-	return 0
+	if Rows(cells) == 0 {
+		return 0
+	}
+	return len(cells[0])
 }
 
 // Get erwartet ein Spielfeld und die Zeile `row` und Spalte `col` einer Zelle
 // und liefert ihren Inhalt.
-//
-// TODO
 func Get(cells [][]string, row, col int) string {
-	return ""
+	return cells[row][col]
 }
 
 // Set erwartet ein Spielfeld, die Zeile `row` und Spalte `col` einer Zelle
 // und einen Wert `value` und schreibt den Wert in die Zelle.
 // Die Änderung ist auch beim Aufrufer zu sehen.
-//
-// TODO
 func Set(cells [][]string, row, col int, value string) {
+	cells[row][col] = value
 }
 
 // Format erwartet ein Spielfeld und liefert es als Text zur Ausgabe:
 // eine Textzeile pro Zeile des Spielfelds, die Zellen durch Leerzeichen
 // getrennt, jede Textzeile mit einem Zeilenumbruch "\n" am Ende.
-//
-// TODO
 func Format(cells [][]string) string {
-	return ""
+	result := ""
+
+	// Alle Zeilen ausgeben.
+	for _, row := range cells {
+		result += FormatRow(row)
+		result += "\n"
+	}
+
+	return result
+}
+
+// FormatRow erwartet eine Zeile eines Grids
+// und liefert einen String, der die Elemente dieser Zeile
+// getrennt durch Leerzeichen enthält.
+func FormatRow(row []string) string {
+	result := ""
+
+	for _, value := range row {
+		result += value
+		result += " "
+	}
+
+	result = result[:len(result)-1]
+
+	return result
 }

@@ -2,6 +2,10 @@
 // Es verwendet die Bibliothek `grid` für das Spielfeld.
 package tictactoe
 
+import (
+	"grid/grid"
+)
+
 // Diese Aufgaben setzen die Regeln von Tic Tac Toe um. Das Spielfeld hat drei
 // Zeilen und drei Spalten; zwei Personen setzen abwechselnd ihr Symbol
 // "X" oder "O" in ein freies Feld. Wer zuerst eine ganze Zeile, Spalte
@@ -23,7 +27,7 @@ const Empty = "."
 //
 // TODO
 func NewBoard() [][]string {
-	return nil
+	return grid.New(3, 3, Empty)
 }
 
 // Place erwartet ein Spielfeld, die Nummer `field` eines Felds von `1` bis `9`
