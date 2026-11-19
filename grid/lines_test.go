@@ -32,10 +32,12 @@ func ExampleCol() {
 func ExampleDiagonal() {
 	fmt.Println(Diagonal([][]string{{"a", "b", "c"}, {"d", "e", "f"}, {"g", "h", "i"}}))
 	fmt.Println(Diagonal([][]string{{"a", "b", "c"}, {"d", "e", "f"}}))
+	fmt.Println(Diagonal([][]string{{"a", "b"}, {"c", "d"}, {"e", "f"}}))
 
 	// Output:
 	// [a e i]
 	// [a e]
+	// [a d]
 }
 
 func ExampleAntiDiagonal() {
